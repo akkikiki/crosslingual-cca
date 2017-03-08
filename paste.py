@@ -23,7 +23,7 @@ counter = 0
 for firstLine in firstFile:
   secondLine = secondFile.readline()
   if len(secondLine) == 0:
-    print 'error: second file is shorter than first file at line {0}'.format(counter)
+    print('error: second file is shorter than first file at line {0}'.format(counter))
     exit(1)
   outputFile.write(u'{0}{1}{2}'.format(firstLine.strip(), args.delimiter, secondLine))
   counter += 1
