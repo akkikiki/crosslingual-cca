@@ -35,7 +35,7 @@ def save_orig_subset_and_aligned(outFileName, lang2WordVectors, lang1AlignedVect
   
 def get_aligned_vectors(wordAlignFile, lang1WordVectors, lang2WordVectors):
   alignedVectors = {}
-  lenLang1Vector = len(lang1WordVectors[lang1WordVectors.keys()[0]])
+  lenLang1Vector = len(lang1WordVectors[list(lang1WordVectors.keys())[0]])
   for line in open(wordAlignFile, 'r'):
     lang1Word, lang2Word = line.strip().split(" ||| ")
     if lang2Word not in lang2WordVectors: continue
